@@ -17,7 +17,7 @@ bash eval/gcg/run_evaluation.sh 'path/to/the/HF/checkpoints/path' 'path/to/the/d
 To evaluate provided finetuned GCG model, run,
 
 ```bash
-bash eval/gcg/run_evaluation.sh 'MBZUAI/GLaMM-GCG' './results_gcg_finetuned'
+bash eval/gcg/run_evaluation.sh 'MBZUAI/GLaMM-GCG' './_results/gcg_finetuned'
 ```
 This will automatically download the `MBZUAI/GLaMM-GCG` from HuggingFace.
 
@@ -32,7 +32,7 @@ bash eval/referring_seg/run_evaluation.sh 'path/to/the/HF/checkpoints/path' 'pat
 To evaluate provided finetuned RefSeg model, run,
 
 ```bash
-bash eval/referring_seg/run_evaluation.sh 'MBZUAI/GLaMM-RefSeg' './results_refseg_finetuned'
+bash eval/referring_seg/run_evaluation.sh 'MBZUAI/GLaMM-RefSeg' './_results/refseg_finetuned'
 ```
 This will automatically download the `MBZUAI/GLaMM-RefSeg` from HuggingFace.
 
@@ -42,7 +42,7 @@ This will automatically download the `MBZUAI/GLaMM-RefSeg` from HuggingFace.
 </p>
 
 
-### 3) Region-level Captioning 🖼️ 
+### 3) Region-level Captioning 🖼️
 Run the following instruction to evaluate GLaMM model on the region-level captioning task
 
 #### RefCOCOg
@@ -53,7 +53,7 @@ bash eval/region_captioning/run_evaluation_RefCOCOg.sh 'path/to/the/HF/checkpoin
 To evaluate provided finetuned RefCOCOg model, run,
 
 ```bash
-bash eval/region_captioning/run_evaluation_RefCOCOg.sh 'MBZUAI/GLaMM-RegCap-RefCOCOg' './results_regcap_refcocog_finetuned'
+bash eval/region_captioning/run_evaluation_RefCOCOg.sh 'MBZUAI/GLaMM-RegCap-RefCOCOg' './_results/regcap_refcocog_finetuned'
 ```
 This will automatically download the `MBZUAI/GLaMM-RegCap-RefCOCOg` from HuggingFace.
 
@@ -66,7 +66,7 @@ bash eval/region_captioning/run_evaluation_VG.sh 'path/to/the/HF/checkpoints/pat
 To evaluate provided finetuned VG model, run,
 
 ```bash
-bash eval/region_captioning/run_evaluation_VG.sh 'MBZUAI/GLaMM-RegCap-VG' './results_regcap_vg_finetuned'
+bash eval/region_captioning/run_evaluation_VG.sh 'MBZUAI/GLaMM-RegCap-VG' './_results/regcap_vg_finetuned'
 ```
 This will automatically download the `MBZUAI/GLaMM-RegCap-VG` from HuggingFace.
 
