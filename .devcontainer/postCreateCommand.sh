@@ -22,12 +22,15 @@ echo "conda activate glamm" >> ~/.bashrc
 source /home/vscode/miniconda3/bin/activate
 
 # Create and activate glamm environment
-conda create -y -n=glamm python=3.10
+conda create -y -n glamm -c conda-forge -c pytorch python=3.10 pytorch=2.0.1
 conda activate glamm
+
+python --version
 
 # Install Nvidia Cuda Compiler
 conda install -y -c nvidia cuda-compiler
 
+pip install --upgrade pip
 pip install -r requirements.txt
 
 export PYTHONPATH="./:$PYTHONPATH"
