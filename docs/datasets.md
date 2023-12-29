@@ -121,7 +121,7 @@ The GranD-f datasets comprise four datasets: one high-quality human-annotated se
 Download links and structure:
 - Annotations: [MBZUAI/GranD-f](https://huggingface.co/datasets/MBZUAI/GranD-f)
 - Images: `GranDf_HA_images` [Download](https://drive.google.com/file/d/1abdxVhrbNQhjJQ8eAcuPrOUBzhGaFsF_/view?usp=drive_link)
-- Other necessary datasets: 
+- Other necessary datasets:
   - Open-PSG GCG: `coco_2017` - COCO-2017 ([train2017](http://images.cocodataset.org/zips/train2017.zip))
   - RefCOCO-g GCG: `coco_2014` - COCO-2014 ([train2014](http://images.cocodataset.org/zips/train2014.zip))
   - Flickr-30k GCG: `flikcr_30k` - flikcr_30k (train) - Download the train images from the [Flickr30K webpage](https://shannon.cs.illinois.edu/DenotationGraph/) or use download from the following [link](https://drive.google.com/file/d/1iomUn-Ht0OBfieMuyoVqEFj5PEmXfQ0U/view?usp=drive_link).
@@ -164,7 +164,7 @@ Download links and structure:
 ```
 
 ### 2) Semantic Segmentation Datasets
-For semantic segmentation, we use five open-source datasets providing segmentation masks and semantic class labels: - ADE20K, COCO-Stuff, PASCAL-Part, PACO-LVIS, and Mapillary. 
+For semantic segmentation, we use five open-source datasets providing segmentation masks and semantic class labels: - ADE20K, COCO-Stuff, PASCAL-Part, PACO-LVIS, and Mapillary.
 
 Download links and structure:
 - [ADE20K](http://data.csail.mit.edu/places/ADEchallenge/ADEChallengeData2016.zip)
@@ -246,7 +246,7 @@ Download the data from the source links, and arrange as follows:
 ```
 
 ### 4) Region-level Captioning Datasets (Expression Generation)
-For region-level captioning, we use five open source datasets with region(bbox) grounding: RefCOCO, RefCOCOg, RefCOCO+, Visual Genome(V1.2) and Flickr30K. 
+For region-level captioning, we use five open source datasets with region(bbox) grounding: RefCOCO, RefCOCOg, RefCOCO+, Visual Genome(V1.2) and Flickr30K.
 
 Download links and structure:
 - Annotations - mdetr_annotations: [Download](https://drive.google.com/file/d/1gvH5ToNtmIr3qz7C9lNi_fDmElwAANsI/view?usp=drive_link)
@@ -311,4 +311,39 @@ Download links and structure:
 │   ├── llava_instruct_150k.json
 ├── coco_2017
 │   ├── train2017
+```
+
+### Create Symbolic links to folders in mounted container
+
+⚠️ The contents of these folders is 100's of files. Viewing them in VScode causes the IDE to crash.
+
+```bash
+ln -s /mnt/vlpdatasets/data/GLaMM data
+```
+
+#### Manual (Individual Folder)
+
+```bash
+cd data
+
+ln -s /mnt/vlpdatasets/data/GLaMM/GranDf GranDf
+ln -s /mnt/vlpdatasets/data/GLaMM/GranDf_HA_images GranDf_HA_images
+ln -s /mnt/vlpdatasets/data/GLaMM/Semantic_Segm Semantic_Segm
+ln -s /mnt/vlpdatasets/data/GLaMM/coco_stuff coco_stuff
+ln -s /mnt/vlpdatasets/data/GLaMM/mapillary mapillary
+ln -s /mnt/vlpdatasets/data/GLaMM/paco_lvis paco_lvis
+ln -s /mnt/vlpdatasets/data/GLaMM/pascal_part pascal_part
+ln -s /mnt/vlpdatasets/data/GLaMM/Refer_Segm Refer_Segm
+ln -s /mnt/vlpdatasets/data/GLaMM/RefCoco_Reg RefCoco_Reg
+ln -s /mnt/vlpdatasets/data/GLaMM/visual_genome visual_genome
+ln -s /mnt/vlpdatasets/data/GLaMM/llava_dataset llava_dataset
+ln -s /mnt/vlpdatasets/data/GLaMM/coco_2017 coco_2017
+ln -s /mnt/vlpdatasets/data/GLaMM/coco_2014 coco_2014
+ln -s /mnt/vlpdatasets/data/GLaMM/flikcr_30k flikcr_30k
+
+cd ..
+```
+
+```bash
+tree -d -L 3 data
 ```
