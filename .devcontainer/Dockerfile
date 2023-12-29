@@ -8,6 +8,8 @@ RUN apt update && \
         build-essential \
         cmake \
         libgl1-mesa-glx \
+        python3-dev \
+        ninja-build \
         jq \
         jp \
         tree \
