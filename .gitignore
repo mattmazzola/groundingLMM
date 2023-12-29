@@ -6,6 +6,9 @@ __pycache__
 # Data
 _data
 
+# Output
+_results
+
 # Secret Environment Variables
 .env*
 
