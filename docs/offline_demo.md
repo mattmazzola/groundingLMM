@@ -35,8 +35,7 @@ For more information on the GLaMM FullScope model, visit [this link](https://hug
 
 Navigate to the directory where the repository was cloned and run the demo using Python. Replace path_to_GLaMM_FullScope_model with the actual path to the downloaded GLaMM FullScope model:
 ```bash
-python app.py --version "path_to_GLaMM_FullScope_model"
-
+python app.py --version "models/GLaMM-FullScope"
 ```
 
 Once the demo is running, follow the on-screen instructions to open the demo dashboard in your web browser. The dashboard provides a user-friendly interface for interacting with the GLaMM model.
