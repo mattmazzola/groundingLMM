@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: eval.gcg.infer",
+            "type": "python",
+            "request": "launch",
+            "module": "eval.gcg.infer",
+            "justMyCode": true,
+            "args": [
+                "--hf_model_path", "MBZUAI/GLaMM-GCG",
+                "--img_dir", "./data/coco2014/train2014",
+                // "--img_dir", "./data/GranDf/GranDf_HA_images/val_test",
+                "--output_dir", "./_results/gcg_finetuned",
+            ],
+            "env": {
+                "PYTHONPATH": "./:$PYTHONPATH"
+            }
+        }
+    ]
+}
