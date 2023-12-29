@@ -31,10 +31,11 @@ conda install -y -c nvidia cuda-nvcc=11.7
 # conda install -y -c pytorch pytorch=2.0.1
 conda install -y -c pytorch -c nvidia pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7
 
-# Install MMCV
+# Install OpenMMLab Computer Vision
 pip install -U openmim
 # mim install mmcv-full
-mim install "mmcv < 1.5.0"
+mim install "mmcv <= 1.5.0"
+# mim install "mmcv-full <= 1.5.0"
 
 pip install -r requirements.txt
 

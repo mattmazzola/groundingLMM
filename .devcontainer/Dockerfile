@@ -5,12 +5,9 @@ SHELL [ "bash", "-c" ]
 # update apt and install packages
 RUN apt update && \
     apt install -yq \
-        ffmpeg \
-        dkms \
-        build-essential
-
-# add user tools
-RUN sudo apt install -yq \
+        build-essential \
+        cmake \
+        libgl1-mesa-glx \
         jq \
         jp \
         tree \
