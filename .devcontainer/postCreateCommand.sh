@@ -25,8 +25,9 @@ source /home/vscode/miniconda3/bin/activate
 conda create -y -n glamm -c conda-forge python=3.10
 conda activate glamm
 
-conda install -y -c pytorch pytorch=2.0.1
-conda install -y -c nvidia cuda-compiler
+# conda install -y -c pytorch pytorch=2.0.1
+conda install -y -c pytorch -c nvidia pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7
+conda install -y -c nvidia cuda-nvcc=11.7
 
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
@@ -46,5 +47,7 @@ cd ..
 
 python --version
 nvcc --version
+
+
 
 echo "postCreateCommand.sh completed!"
