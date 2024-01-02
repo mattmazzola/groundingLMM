@@ -7,6 +7,8 @@ RUN apt update && \
     apt install -yq \
         build-essential \
         cmake \
+        ffmpeg \
+        libturbojpeg \
         libgl1-mesa-glx \
         python3-dev \
         ninja-build \
