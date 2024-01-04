@@ -37,9 +37,7 @@ conda install -y -c pytorch -c nvidia pytorch==1.13.1 torchvision==0.14.1 torcha
 
 # Install OpenMMLab Computer Vision
 pip install -U openmim
-# mim install mmcv-full
-mim install "mmcv <= 1.5.0"
-# mim install "mmcv-full <= 1.5.0"
+mim install "mmcv-full <= 1.5.0"
 
 pip install -r requirements.txt
 
