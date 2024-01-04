@@ -32,6 +32,7 @@ conda install -y -c nvidia cuda=11.7 cuda-nvcc=11.7
 export CUDA_HOME=/home/vscode/miniconda3/envs/glamm
 echo "export CUDA_HOME=$CUDA_HOME" >> ~/.bashrc
 echo "export CUDA_HOME=$CUDA_HOME" >> ~/.zshrc
+
 conda install -y -c pytorch -c nvidia pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7
 
 # Install OpenMMLab Computer Vision
@@ -47,7 +48,7 @@ export PYTHONPATH="./:$PYTHONPATH"
 # Install Amulet
 pip install -U amlt --index-url https://msrpypi.azurewebsites.net/stable/leloojoo
 
-# Dowload pretrained LLaVA models
+# Dowload pretrained models
 mkdir -p models
 cd models
 
@@ -57,5 +58,6 @@ cd ..
 
 python --version
 nvcc --version
+python -c "import torch; print(torch.__version__)"
 
 echo "postCreateCommand.sh completed!"
