@@ -12,8 +12,7 @@
             "justMyCode": true,
             "args": [
                 "--hf_model_path", "MBZUAI/GLaMM-GCG",
-                "--img_dir", "./data/coco2014/train2014",
-                // "--img_dir", "./data/GranDf/GranDf_HA_images/val_test",
+                "--img_dir", "./data/GranDf_HA_images/val_test",
                 "--output_dir", "./_results/gcg_finetuned",
             ],
             "env": {
