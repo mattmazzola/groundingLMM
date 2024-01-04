@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
     # Create DDP Dataset
     dataset = GCGEvalDDP(args.img_dir)
-    distributed_sampler = DistributedSampler(dataset, rank=args.rank, shuffle=False)
+    distributed_sampler = DistributedSampler(dataset, rank=args.local_rank, shuffle=False)
     dataloader = DataLoader(dataset, batch_size=args.batch_size_per_gpu, num_workers=2,
                             sampler=distributed_sampler, collate_fn=custom_collate_fn)
 
