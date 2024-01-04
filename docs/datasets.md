@@ -345,5 +345,5 @@ cd ..
 ```
 
 ```bash
-tree -d -L 3 data
+tree -d -L 2 data
 ```
